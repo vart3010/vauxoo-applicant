@@ -1,16 +1,25 @@
 """
-Your module documentation here
+Mathematical Module
 """
 
 
 class PrimeClass(object):
     """
-    Your class documentation here
+    Calculate Class
     """
 
     def is_prime(self, num_int):
-        """
-        Your method documentation here
-        """
-        # your primes code here
-        return "not implement yet"  # Remove this dummy line
+		"""
+		Method that calculates if a number is prime
+		"""
+		cont = 0
+		band = False
+		for i in xrange(2,num_int+1):
+			if num_int % i == 0:
+				cont = cont +1
+
+		if cont == 1:
+			return True
+		else:
+			return False
+        
