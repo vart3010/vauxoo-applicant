@@ -60,6 +60,12 @@ INSERT INTO employee_hobby_employee (id_employee,id_employee_hobby) VALUES
 ('4','3')
 ;
 
+ALTER TABLE employee ADD COLUMN id_employee_boss INTEGER REFERENCES employee;
+
+update employee set id_employee_boss =  1 where id = 1;
+update employee set id_employee_boss =  1 where id = 2;
+update employee set id_employee_boss =  2 where id = 3;
+update employee set id_employee_boss =  2 where id = 4;
 
 
 
