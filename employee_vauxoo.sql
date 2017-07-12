@@ -16,7 +16,11 @@ CREATE TABLE employee (
 	id_employee_department INTEGER REFERENCES employee_department
 );
 
-
+CREATE TABLE employee_hobby (
+	id SERIAL PRIMARY KEY NOT NULL,
+	name CHAR(200) NOT NULL,
+	description TEXT NOT NULL
+);
 
 INSERT INTO employee_department  (name,description) VALUES 
 ('AIT','Soporte a equipos de computacion'),
@@ -31,6 +35,29 @@ INSERT INTO employee (first_name,last_name,id_employee_department) VALUES
 ('Andrea','Figueredo','3'),
 ('Ismael','Rodriguez','4'),
 ('Luis','Salazar','5')
+;
+
+INSERT INTO employee_hobby (name,description) VALUES 
+('Musica','Componer e interpretar canciones'),
+('Electronica','Elaborar circuitos'),
+('Programar','desarrollar aplicaciones')
+;
+
+CREATE TABLE employee_hobby_employee  (
+	id_employee INTEGER REFERENCES employee,
+	,id_employee_hobby INTEGER REFERENCES employee_hobby
+);
+
+INSERT INTO employee_hobby_employee (id_employee,id_employee_hobby) VALUES
+('1','1'),
+('1','2'),
+('2','2'),
+('2','3'),
+('3','1'),
+('3','2'),
+('3','3'),
+('4','1'),
+('4','3')
 ;
 
 
