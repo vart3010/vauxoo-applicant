@@ -1,16 +1,16 @@
 """
-Your module documentation here
+Calculate Module
 """
 
 
 class CalculatorClass(object):
     """
-    Your class documentation here
+    Calculate class
     """
 
     def sum(self, num_list):
         """
-        Your method documentation here
+        Method to add numbers
         """
         suma = 0
         for i in num_list:
