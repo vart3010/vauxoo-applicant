@@ -13,8 +13,8 @@ class CalculatorClass(object):
         Method to add numbers
         """
         suma = 0
-        for i in num_list:
-        	suma = suma + i
+        for number in num_list:
+        	suma = suma + number
 
         return suma
 
